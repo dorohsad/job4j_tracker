@@ -9,7 +9,6 @@ public class StartUI {
             int select = input.askInt("Select: ");
             if (select == 0) {
                 System.out.println("=== Create a new Item ===");
-                //System.out.print("Enter name: ");
                 String name = input.askStr("Enter name: ");
                 Item item = new Item(name);
                 tracker.add(item);
@@ -26,9 +25,7 @@ public class StartUI {
                 }
             } else if (select == 2) {
                 System.out.println("=== Edit item ===");
-                //System.out.print("Enter id: ");
                 int id = input.askInt("Enter id: ");
-                //System.out.print("Enter name: ");
                 String name = input.askStr("Enter name: ");
                 Item item = new Item(name);
                 if (tracker.replace(id, item)) {
