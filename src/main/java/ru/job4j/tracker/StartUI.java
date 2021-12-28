@@ -35,7 +35,6 @@ public class StartUI {
 
     public static void deleteItem(Input input, Tracker tracker) {
         System.out.println("=== Delete item ===");
-        System.out.print("Enter id: ");
         int id = input.askInt("Enter id: ");
         if (tracker.delete(id)) {
             System.out.println("Заявка удалена успешно.");
@@ -85,9 +84,7 @@ public class StartUI {
                 StartUI.findItemById(input, tracker);
             } else if (select == 5) {
                 StartUI.findItemByName(input, tracker);
-            } else if (select != 6) {
-                System.out.println("Пользователь выбрал: " + select);
-            } else {
+            } else if (select == 6) {
                 run = false;
             }
         }
