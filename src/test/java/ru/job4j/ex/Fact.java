@@ -7,10 +7,10 @@ public class Fact {
 
     public int calc(int n) {
         if (n < 0) {
-            throw new IllegalArgumentException("The number must be greater than zero!");
+            throw new IllegalArgumentException("Number must not be negative!");
         }
         int rsl = 1;
-        for (int index = 1; index <= n; index++) {
+        for (int index = 2; index <= n; index++) {
             rsl *= index;
         }
         return rsl;
