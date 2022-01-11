@@ -38,9 +38,9 @@ public class ValidateInputTest {
         );
         ValidateInput input = new ValidateInput(in, out);
         int[] numbers = new int[3];
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = input.askInt("Enter menu:");
-        }
+        numbers[0] = input.askInt("Enter menu:");
+        numbers[1] = input.askInt("Enter menu:");
+        numbers[2] = input.askInt("Enter menu:");
         int[] expected = {2, 3, 5};
         assertArrayEquals(expected, numbers);
     }
