@@ -24,6 +24,7 @@ public class BankService {
         for (User user : users.keySet()) {
             if (passport.equals(user.getPassport())) {
                 result = user;
+                break;
             }
         }
         return result;
@@ -37,6 +38,7 @@ public class BankService {
             for (Account account : accounts) {
                 if (requisite.equals(account.getRequisite())) {
                     result = account;
+                    break;
                 }
             }
         }
