@@ -12,9 +12,9 @@ public class StringCompare implements Comparator<String> {
         int minLength = min(first.length, second.length);
         for (int i = 0; i < minLength; i++) {
             if (first[i] != second[i]) {
-                return first[i] - second[i];
+                return Character.compare(first[i], second[i]);
             }
         }
-        return first.length - second.length;
+        return Integer.compare(first.length, second.length);
     }
 }
